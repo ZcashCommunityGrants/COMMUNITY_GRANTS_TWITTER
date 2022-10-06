@@ -6,14 +6,10 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/checkout@main
-=======
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
->>>>>>> e81a69ea290e36e30aaade73d096fb86d14be5a9
       - run: npm ci
       - run: npm run build
       - name: Preview
@@ -25,14 +21,10 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/checkout@main
-=======
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
->>>>>>> e81a69ea290e36e30aaade73d096fb86d14be5a9
       - run: npm ci
       - run: npm run build
       - name: Tweet
