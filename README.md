@@ -36,11 +36,17 @@ You can submit a tweet to this repository to see the magic happen. Please follow
 
 ## Twitter API compatibility
 
-The Twitter Ads API we currently use is the `v8` version.
+Twitter, Together uses the v2 Twitter API for most functionality.
+It makes use of the v1 API for media uploads, as there is no v2 equivalent endpoint.
+
+Essentials level Twitter access should grant access to all endpoints Twitter, Together uses.
 
 ## Setup
 
-1. [Create a twitter app](docs/01-create-twitter-app.md) with your shared twitter account and store the credentials as `TWITTER_API_KEY`, `TWITTER_API_SECRET_KEY`, `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_TOKEN_SECRET` in your repository’s secrets settings.
+Unless you wish to contribute to this project, you don't need to fork this repository.
+Instead, you can make use of this GitHub Action from the comfort of your own repository (either a new one, or one you already have) by creating a GitHub Actions workflow following these steps:
+
+1. [Create a Twitter app](docs/01-create-twitter-app.md) with your shared Twitter account and store the credentials as `TWITTER_API_KEY`, `TWITTER_API_SECRET_KEY`, `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_TOKEN_SECRET` in your repository’s secrets settings.
 2. [Create a `.github/workflows/twitter-together.yml` file](docs/02-create-twitter-together-workflow.md) with the content below. Make sure to replace `'main'` if you changed your repository's default branch.
 
    ```yml
@@ -89,8 +95,20 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to contribute
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://jasonet.co"><img src="https://avatars1.githubusercontent.com/u/10660468?v=4" width="100px;" alt="Jason Etcovitch"/><br /><sub><b>Jason Etcovitch</b></sub></a><br /><a href="#design-JasonEtco" title="Design">🎨</a> <a href="https://github.com/twitter-together/action/commits?author=JasonEtco" title="Documentation">📖</a> <a href="https://github.com/twitter-together/action/commits?author=JasonEtco" title="Code">💻</a></td><td align="center"><a href="http://erons.me"><img src="https://avatars0.githubusercontent.com/u/37238033?v=4" width="100px;" alt="Erons"/><br /><sub><b>Erons</b></sub></a><br /><a href="https://github.com/twitter-together/action/commits?author=Eronmmer" title="Documentation">📖</a></td></tr></table>
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://jasonet.co"><img src="https://avatars1.githubusercontent.com/u/10660468?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jason Etcovitch</b></sub></a><br /><a href="#design-JasonEtco" title="Design">🎨</a> <a href="https://github.com/twitter-together/action/commits?author=JasonEtco" title="Documentation">📖</a> <a href="https://github.com/twitter-together/action/commits?author=JasonEtco" title="Code">💻</a></td>
+      <td align="center"><a href="http://erons.me"><img src="https://avatars0.githubusercontent.com/u/37238033?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erons</b></sub></a><br /><a href="https://github.com/twitter-together/action/commits?author=Eronmmer" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://mattcowley.co.uk/"><img src="https://avatars.githubusercontent.com/u/12371363?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Cowley</b></sub></a><br /><a href="https://github.com/twitter-together/action/commits?author=MattIPv4" title="Code">💻</a> <a href="https://github.com/twitter-together/action/commits?author=MattIPv4" title="Documentation">📖</a> <a href="https://github.com/twitter-together/action/commits?author=MattIPv4" title="Tests">⚠️</a> <a href="#ideas-MattIPv4" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
